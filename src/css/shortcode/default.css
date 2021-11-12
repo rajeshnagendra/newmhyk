@@ -454,7 +454,7 @@ textarea {
 .pt-72 { padding-top: 72px }
 .pt-75 { padding-top: 75px }
 .pt-80 { padding-top: 80px }
-.pt-85 { padding-top: 85px }
+.pt-85 { padding-top: 40px }
 .pt-90 { padding-top: 90px }
 .pt-95 { padding-top: 95px }
 .pt-98 { padding-top: 98px }
@@ -509,7 +509,7 @@ textarea {
 .pb-78 { padding-bottom: 78px }
 .pb-80 { padding-bottom: 80px }
 .pb-85 { padding-bottom: 85px }
-.pb-90 { padding-bottom: 90px }
+.pb-90 { padding-bottom: 50px }
 .pb-95 { padding-bottom: 95px }
 .pb-100 { padding-bottom: 100px }
 .pb-105 { padding-bottom: 105px }
