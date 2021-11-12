@@ -1,11 +1,12 @@
 import React from 'react';
+import { render } from 'react-dom';
 //import PropTypes from 'prop-types';
 import styles from './ClassPage.module.css';
 import Header from '../MenuHeader/MenuHeader';
 import Footer from '../FooterPage/FooterPage';
 import SchedulePage from '../SchedulePage/SchedulePage';
-import { render } from 'react-dom';
-//import SchedulePage from '../SchedulePage/SchedulePage';
+const dataitems2 = require("../../Data/data2.json");
+
 
 function schedule(){
     render(<SchedulePage/>, document.getElementById('root'));
@@ -113,83 +114,83 @@ const ClassPage = () => (
             </div>
     </section>
 
-    <section class="schedule-area pt-85 pb-90 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-xl-2 offset-lg-2">
-                        <div class="section-title">
-                            <h2>class schedule</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum issss has been the industry's standard dummy text ever since the 1500s, when an unknown lorem </p>
-                        </div>
-                    </div>
-                </div>    
-                <div class="row">
-                    <div class="col-12">                             
-                        <div class="scehedule-table table-content table-responsive text-center">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Classes</th>
-                                        <th>Timings</th>
-                                        <th>Day</th>
-                                        <th>Teacher</th>
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody class="pt-30">
-                                    <tr >
-                                        <td class="purple">Ashtanga Yoga TTC & Drop-in's</td>
-                                        <td class="purple">4.30 am - 6.00 am</td>
-                                        <td class="purple">Monday to Friday</td>
-                                        <td class="purple">Praveen</td> 
-                                    </tr>
-                                    <tr >
-                                        <td class="olive">Hatha Yoga TTC & Drop-in's</td>
-                                        <td class="olive">6.00 am - 7.30 am</td>
-                                        <td class="olive">Monday to Friday</td>
-                                        <td class="olive">Praveen / Kumudha / Kavya / Rajesh</td> 
-                                    </tr>
-                                    <tr >
-                                        <td class="purple">Kids Yoga</td>
-                                        <td class="purple">5.00 pm - 5.45 pm</td>
-                                        <td class="purple">Monday to Thursday</td>
-                                        <td class="purple">Deepa / Kavya</td> 
-                                    </tr>
-                                    <tr >
-                                        <td class="olive">Singing Classes</td>
-                                        <td class="olive">6.00 pm - 6.45 pm	</td>
-                                        <td class="olive">2 classes per week	</td>
-                                        <td class="olive">Sree Lakshmi</td> 
-                                    </tr>
-                                    <tr >
-                                        <td class="purple">Pranayama / Meditation / Chantting Class	</td>
-                                        <td class="purple">6.30 am - 7.30 am</td>
-                                        <td class="purple">Monday to Thursday</td>
-                                        <td class="purple">Praveen/Asha</td> 
-                                    </tr>
-                                    <tr >
-                                        <td class="olive">Asana Adjustment Class for TTC</td>
-                                        <td class="olive">3.30 pm - 5.00 pm	</td>
-                                        <td class="olive">Monday to Friday</td>
-                                        <td class="olive">Praveen / Asha</td> 
-                                    </tr>
+ 
+    <ClassSchedule />
+   
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a class="banner-btn mt-55" href="#/" onClick={schedule} data-text="view all schedule"><span>view all Schedule</span></a>
-                </div>
-            </div>
-    </section>
-    
     <Footer />
   </div>
 );
+
+const Scheduledata = ({ classes, timings, day, teacher }) => {
+    if (!classes) return <div />;
+    return (
+        <table>
+            <th>CLASSES</th>
+            <th>TIMINGS</th>
+            <th>DAY</th>
+            <th>TEACHER</th>
+        <tbody>    
+          <tr>
+            <td class="purple">
+              {classes}
+            </td>
+            <td class="olive">
+              {timings}
+            </td>
+            <td class="pink">
+              {day}
+            </td>
+            <td class="blue">
+              {teacher}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  };
+
+  const ClassSchedule = () => {
+    //console.log(dataitems2);
+    return(
+        <div>
+        <div class="schedule-area pt-85 pb-90 text-center">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-8 offset-xl-2 offset-lg-2">
+                <div class="section-title">
+                    <h2>CLASS SCHEDULES</h2>
+                </div>
+            </div>
+            </div> 
+            <div class="row">
+                <div class="scehedule-table table-content table-responsive text-center">
+                    <div class="col-12">
+                    {dataitems2.map((data, key) => {
+                        return (
+                          <div key={key}>
+                            <Scheduledata
+                              key={key}
+                              classes={data.classes}
+                              timings={data.timings}
+                              day={data.day}
+                              teacher={data.teacher}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+                    <div class="col-12 text-center">
+                        <a class="banner-btn mt-55" href="#/" onClick={schedule} data-text="view all classes"><span>view all Schedule</span></a>
+                    </div>
+                </div>
+        </div>);
+}
 
 ClassPage.propTypes = {};
 

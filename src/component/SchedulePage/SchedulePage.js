@@ -5,7 +5,7 @@ import MenuHeader from '../MenuHeader/MenuHeader';
 import FooterPage from '../FooterPage/FooterPage';
 import ClassPage from '../ClassPage/ClassPage';
 import { render } from 'react-dom';
-const dataitems = require("../../data.json");
+const dataitems = require("../../Data/data.json");
 const dataitems2 = require("../../Data/data2.json");
 const dataitems1 = require("../../Data/data3.json");
 
@@ -291,7 +291,6 @@ const ClassSchedule = () => {
         </div>);
 }
  
-
 
 SchedulePage.propTypes = {};
 
