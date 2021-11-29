@@ -7,12 +7,14 @@ import AboutUs from '../AboutUsPage/AboutUsPage';
 import Classess from '../ClassPage/ClassPage';
 import Footer from '../FooterPage/FooterPage';
 import Praveendetails from '../TrainerPraveen/TrainerPraveen';
+import Ashadetails from '../TrainerAsha/TrainerAsha';
 import ashaphoto from '../../img/portfolio/Asha.JPG';
-import aboutimg from '../../img/about/about.jpg';
+//import aboutimg from '../../img/about/about.jpg';
 //import slider2 from '../../img/slider/slider2.jpg';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 //import { render } from '@testing-library/react';
+import ReactPlayer from "react-player";
 
 
 /*const options = {
@@ -32,6 +34,10 @@ function classes(){
 
 function praveendetails(){
     render(<Praveendetails />, document.getElementById('root'));
+}
+
+function ashadetails(){
+    render(<Ashadetails />, document.getElementById('root'));
 }
 
 const HomePageSlider = () => ( 
@@ -73,13 +79,12 @@ const HomePageSlider = () => (
             </div>
             <div class="col-lg-6">
                 <div class="about-video active">
-                     <div class="game">
-                         <a href="#/"><img src={aboutimg} alt="about" /></a>
-                     </div> 
                      <div class="video-icon video-hover">
-                         <a class="video-popup" href="https://www.youtube.com/watch?v=A47zwWsjXgs">
-                             <i class="zmdi zmdi-play"></i>
-                         </a>
+                         <ReactPlayer class="video-popup" 
+                            url="https://www.youtube.com/watch?v=A47zwWsjXgs"
+                            allowfullscreen="1"
+                            frameborder="0"
+                            />
                      </div>
                 </div>
             </div>
@@ -191,7 +196,7 @@ const HomePageSlider = () => (
                 <div class="single-trainer text-center">
                     <img src={ashaphoto} alt="trainer" style={{width: 400, height: 400, borderRadius: 400/ 2 }} />
                     <div class="trainer-hover">
-                        <h3>John laisa do</h3>
+                        <h3><a href="#/" onClick={ashadetails}>Asha</a></h3>
                         <ul>
                             <li><a href=" https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>  
                             <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>

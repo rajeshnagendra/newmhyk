@@ -1,38 +1,45 @@
 [
-    {
+      {
+        "id": 1,
         "classes": "Ashtanga Yoga TTC & Drop-in's",
         "timings": "4.30 am - 6.00 am",
-        "day": "Monday to Friday",
+        "day": "j",
         "teacher": "Praveen"
-    },
-    {
-        "classes": "Hatha Yoga TTC & Drop-in's", 
+      },
+      {
+        "id": 2,
+        "classes": "Hatha Yoga TTC & Drop-in's",
         "timings": "6.00 am - 7.30 am",
         "day": "Monday to Friday",
         "teacher": "Praveen / Kumudha / Kavya / Rajesh"
-    },
-    {
+      },
+      {
+        "id": 3,
         "classes": "Kids Yoga",
         "timings": "5.00 pm - 5.45 pm",
-        "day": "Monday to Friday",
+        "day": "D",
         "teacher": "Deepa / Kavya"
-    },
-    {
+      },
+      {
+        "id": 4,
         "classes": "Singing Classes",
         "timings": "6.00 pm - 6.45 pm",
         "day": "2 classes per week",
         "teacher": "Sree Lakshmi"
-    },
-    {
+      },
+      {
+        "id": 7,
         "classes": "Pranayama / Meditation / Chantting Class",
         "timings": "6.30 am - 7.30 am",
         "day": "Monday to Thursday",
-        "teacher": "Praveen/Asha"
-    },
-    {
+        "teacher": "Praveen/Asha",
+        "unit_price": "j"
+      },
+      {
+        "id": 8,
         "classes": "Asana Adjustment Class for TTC",
         "timings": "3.30 pm - 5.00 pm",
         "day": "Monday to Friday",
         "teacher": "Praveen / Asha"
-    } 
+      }
 ]

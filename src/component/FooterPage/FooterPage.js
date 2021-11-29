@@ -8,37 +8,12 @@ const FooterPage = () => (
             <div class="google-map-area">
                 <div id="contacts" class="map-area">
                     <iframe class="contact-map-size" title= "map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1613802584124!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124745.8687952489!2d76.57556245150641!3d12.29500609287215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf700115533321%3A0x7d5050431f1f614e!2sMysore%20Hatha%20Yoga%20Kendra!5e0!3m2!1sen!2sin!4v1637217218781!5m2!1sen!2sin"
                         allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
     </div>
-
-    <section class="newsletter-area bg-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="newsletter-wrapper fix">
-                        <div class="col-lg-10 offset-lg-1">
-                            <div class="newsletter-content section-title text-center">
-                                <h2>subscribe now for latest update!</h2> 
-                                <div class="newsletter-form">
-                                    <form action="#" id="mc-form" class="mc-form fix">
-                                        <input id="mc-email" type="email" name="email" placeholder="Enter Your E-mail ID" />
-                                        <button id="mc-submit" type="submit" class="default-btn" data-text="submit"><span>submit</span></button> 
-                                    </form>
-                                    <div class="mailchimp-alerts">
-                                        <div class="mailchimp-submitting"></div>
-                                        <div class="mailchimp-success"></div>
-                                        <div class="mailchimp-error"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                </div>
-            </div>
-    </section>
 
     <footer class="footer-area bg-gray">
             <div class="footer-widget-area bg-3 pt-98 pb-90 fix">
